@@ -127,10 +127,11 @@ client.on('ready', async () => {
 client.login(process.env.TOKEN);
 
 
+
 async function createMessage(msg, dates, result) {
   
   //multiplier = (vwArray.length % 2048) + 0.1;
-  
+  const multiplier = 1;
   const url = `https://api.polygon.io/v2/aggs/ticker/${result[0]}/range/${multiplier}/day/${dates.oneMonthAgo}/${dates.current}?adjusted=true&sort=asc&apiKey=${process.env.POLYGON_KEY}`
 
   const response = await fetch(url);
