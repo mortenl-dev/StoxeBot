@@ -28,6 +28,7 @@ Always ping the bot prior to any command; The core command inclues just typing o
 @Stoxe AAPL
 ```
 This returns the following discord message:
+![screenshot](./Screenshot1.png)
 
 
 In case you click on the emoji at the bottom, you will be registered as a user in the database and the stock will be added to your user ID as a bookmark.
