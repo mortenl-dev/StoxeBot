@@ -40,11 +40,6 @@ async function run() {
 }
 run().catch(console.dir);
 
-const userSchema = new mongoose.Schema({
-  discordId: { type: String, required: true, unique: true },
-  username: { type: String, required: true },
-  joinedAt: { type: Date, default: Date.now },
-});
 
 // ------------------------------------------------------------------
 
@@ -136,7 +131,7 @@ async function createMessage(msg, dates, result) {
   
   //multiplier = (vwArray.length % 2048) + 0.1;
   
-  const url = `https://api.polygon.io/v2/aggs/ticker/${result[0]}/range/${multiplier}/day/${dates.oneMonthAgo}/${dates.current}?adjusted=true&sort=asc&apiKey=eLTH_eXFOmF8qUvvHk9Tru8lyzmQc7bZ`
+  const url = `https://api.polygon.io/v2/aggs/ticker/${result[0]}/range/${multiplier}/day/${dates.oneMonthAgo}/${dates.current}?adjusted=true&sort=asc&apiKey=${process.env.POLYGON_KEY}`
 
   const response = await fetch(url);
   const data = await response.json();
