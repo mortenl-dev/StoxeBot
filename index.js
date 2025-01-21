@@ -146,7 +146,7 @@ async function createMessage(msg, dates, result) {
   const chartEmbed = createEmbed(data, fmpdata[0], symbol, vwArray, url);
   
 
-  const botmsg = await msg.reply({ embeds: [chartEmbed] });
+  const botmsg = await msg.channel.send({ embeds: [chartEmbed] });
 
   try {
     await botmsg.react('✅'); // Bot adds the reaction
