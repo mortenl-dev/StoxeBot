@@ -31,21 +31,26 @@ This returns the following discord message:
 ![screenshot](./Screenshot1.png)
 
 
-In case you click on the emoji at the bottom, you will be registered as a user in the database and the stock will be added to your user ID as a bookmark.
+In case you click on the emoji at the bottom, you will be registered as a user in the database (if you haven't already been) and the stock will be added to your user ID as a bookmark.
 
 You can now use the keyword 'BOOKMARKS' to display all the saved stocks on your account at once:
 ```bash
 @Stoxe BOOKMARKS
 ```
 
-## Roadmap
+ ## Roadmap
+
+- [x] Enable API fetches for any stock
+- [x] Add exception handling
+- [x] Create database
+- [x] Enable bookmarking
+- [ ] Add more parameters
+- [ ] Allow users to insert monetary value & calculate theoretical profit/loss over time
 
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 
