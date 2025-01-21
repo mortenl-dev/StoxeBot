@@ -81,7 +81,6 @@ async function ReactShowSaved(reaction,user) {
   if (reaction.message.author.id === client.user.id) {
     if (reaction.emoji.name === '✅') {
       console.log(`${user.tag} reacted with ✅`);
-      reaction.message.channel.send(`${user.id} triggered the ✅ reaction!`);
       const collection = mongoClient.db("Main").collection("User");
 
       try {
@@ -92,7 +91,7 @@ async function ReactShowSaved(reaction,user) {
             { id: user.id }, 
             { $addToSet: { dataSet: symbol } } 
           );
-            return message.channel.send("Your stock has been saved!");
+            return reaction.message.channel.send("Your stock has been saved!");
         }
         
         
@@ -100,12 +99,12 @@ async function ReactShowSaved(reaction,user) {
         collection.insertOne(insertUser)
         
 
-        message.channel.send({ content: 'You have been registered and your stock has been saved!', ephemeral: true });
+        reaction.message.channel.send({ content: 'You have been registered and your stock has been saved!', ephemeral: true });
         
         
       } catch (error) {
           console.error('Error saving user:', error);
-          message.channel.send({ content: 'An error occurred while registering.', ephemeral: true });
+          reaction.message.channel.send({ content: 'An error occurred while registering.', ephemeral: true });
       }
     }
   }
