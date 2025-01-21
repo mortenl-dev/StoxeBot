@@ -10,10 +10,10 @@ npm install discord.js dotenv mongodb mongoose node nodemon quickchart-js
 ```
 4. You will need to generate the following API keys for the .env file:
 ```bash
-TOKEN = Your discord API token
-FMP_KEY = Your FMP token. Can be found here: https://site.financialmodelingprep.com/developer/docs
-MONGO_URI = The token for your MongoDB cluster (You will need to create an account and a cluster first)
-POLYGON_KEY = The token for your Polygon.io account
+TOKEN = #Your discord API token
+FMP_KEY = #Your FMP token. Can be found here: https://site.financialmodelingprep.com/developer/docs
+MONGO_URI = #The token for your MongoDB cluster (You will need to create an account and a cluster first)
+POLYGON_KEY = #The token for your Polygon.io account
 ```
 5. Using this and the discord token you have already generated, you can now create a discord bot/application and test it on your server! Just don't forget to run your code through your terminal first:
 
@@ -23,6 +23,18 @@ node .
 
 ## Demonstration
 
+```python
+import foobar
+
+# returns 'words'
+foobar.pluralize('word')
+
+# returns 'geese'
+foobar.pluralize('goose')
+
+# returns 'phenomenon'
+foobar.singularize('phenomena')
+```
 
 ## Contributing
 
