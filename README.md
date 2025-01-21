@@ -28,6 +28,7 @@ Always ping the bot prior to any command; The core command inclues just typing o
 @Stoxe AAPL
 ```
 This returns the following discord message:
+
 ![screenshot](./Screenshot1.png)
 
 
