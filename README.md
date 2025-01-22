@@ -38,7 +38,7 @@ You can now use the keyword 'BOOKMARKS' to display all the saved stocks on your 
 ```bash
 @Stoxe BOOKMARKS
 ```
-![screenshot](./Screenshot(211).png)
+![screenshot](./Screenshot2.png)
  ## Roadmap
 
 - [x] Enable API fetches for any stock
